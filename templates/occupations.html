@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+{% block content1 %}
+Table of Occupations
+
+  
+<table border = "2" align="center">
+  {% for i in occupation %}
+  <tr>
+  <td>
+    {{i}}
+  </td>
+  <td>
+    {{occupation[i]}}
+    </td>
+  </tr>
+{% endfor %}
+</table>
+<b>RandomOccupationResult - {{randoccupation}}</b>
+{% endblock %}
