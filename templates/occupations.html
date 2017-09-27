@@ -1,19 +1,35 @@
 {% extends "template.html" %}
 {% block content1 %}
-Table of Occupations
-
-  
-<table border = "2" align="center">
-  {% for i in occupation %}
+<h1> Table of Occupations </h1>
+<table border = "2">
   <tr>
-  <td>
-    {{i}}
-  </td>
-  <td>
-    {{occupation[i]}}
+    <td>
+    <b>  Occupation </b>
+    </td>
+    <td>
+     <b> Percentage </b>
     </td>
   </tr>
-{% endfor %}
+  
+  {% for i in occupation %}
+  <tr>
+    <td>
+      {{i}}
+    </td>
+    <td>
+      {{occupation[i]}} %
+    </td>
+  </tr>
+  {% endfor %}
+  <tr>
+    <td>
+      <b> Total </b>
+    </td>
+    <td>
+      <b> 99.8 % </b>
+    </td>
+  </tr>
 </table>
+<br>
 <b>RandomOccupationResult - {{randoccupation}}</b>
 {% endblock %}
